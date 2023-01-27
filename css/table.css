@@ -1,6 +1,7 @@
 /*##################### 공통 테이블#####################*/
 .contents {
   box-sizing: border-box;
+
 }
 
 .contents .row {
@@ -24,25 +25,18 @@
 .contents th {
   text-align: center;
   padding: 16px;
-  font-size: 12px;
-}
-
-.contents th:last-child {
-  text-align: right;
-  padding: 16px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .contents td {
-  text-align: left;
+  text-align: center;
   padding: 16px;
   font-size: 12px;
 }
 
-.contents td:last-child {
-  text-align: right;
-  padding: 16px;
-  font-size: 12px;
+.contents td img {
+  width: 48px;
+  height: 48px;
 }
 
 .contents tr:nth-child(even) {

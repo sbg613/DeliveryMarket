@@ -1,0 +1,438 @@
+/*##################### header #####################*/
+.header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    background-color: #333;
+    overflow: hidden; 
+}
+
+.header .box {
+    height: 50px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #04AA6D;
+    color: #f2f2f2;
+    font-size: 17px;
+}
+
+.header .box  a {
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+}
+
+.header .box:nth-child(1) {
+    display: flex;
+    flex-basis: 5%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+}
+
+.header .box:nth-child(1) a img {
+    width: 100%;
+    height: 100%;
+}
+
+.header .box:nth-child(2) {
+    display: flex;
+    flex-basis: 2%;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+
+}   
+
+.header .box:nth-child(3) {
+    display: flex;
+    flex-basis: 88%;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #000;
+}
+
+
+.header .box:nth-child(4) {
+    display: flex;
+    flex-basis: 5%;
+    justify-content: center;
+    align-items: center;
+    background-color: #04AA6D;
+}
+
+
+/*##################### navbar #####################*/
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    background-color: #555;
+    overflow: auto; 
+}
+
+.navbar .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin: 0px;
+    padding: 0px 10px 0px 10px;
+    color: #f2f2f2;
+    font-size: 17px;
+}
+
+.navbar .box  a {
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Navbar links on mouse-over */
+.navbar .box:hover {
+    background-color: #000;
+}
+
+/* Current/active navbar link */
+.active {
+    background-color: #04AA6D;
+}
+
+
+/*##################### searchbar #####################*/
+.searchbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    background-color: white;
+    overflow: hidden; 
+}
+
+.searchbar .box {
+    height: 50px;
+    margin: 0px;
+    padding: 0px 10px 0px 10px;
+    background-color: rgb(180, 180, 170);
+    color: #f2f2f2;
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.searchbar .box:nth-child(1) {
+    display: flex;
+    flex-basis: 15%;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchbar .box:nth-child(2) {
+    display: flex;
+    flex-basis: 15%;
+    justify-content: center;
+    align-items: center;
+}   
+
+.searchbar .box:nth-child(3) {
+    display: flex;
+    flex-basis: 62%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.searchbar .box:nth-child(4) {
+    display: flex;
+    flex-basis: 8%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.searchbar .box select {
+    width: 100%;
+    height: 50%;
+}
+
+.searchbar .box input {
+    width: 50%;
+    height: 40%;
+}
+
+
+/*##################### Modal #####################*/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/*##################### Modal Goods #####################*/
+
+#modalAddGoods {
+    box-sizing: border-box;
+
+}
+
+#modalAddGoods .modal-content {
+    width: 500px;
+    height: 550px;
+
+}
+
+/* Add padding to containers */
+#modalAddGoods .container {
+    margin: 0;
+    padding: 0;
+}
+
+#modalAddGoods .container h4 {
+    margin: 12px 4px 8px 4px !important;
+    padding: 0;
+}
+
+#modalAddGoods .container hr {
+    margin: 0 !important;
+    padding: 0;
+}
+
+
+#modalAddGoods label {
+    font-size: 10px;
+
+}
+
+/* Full-width input fields */
+#modalAddGoods input[type=text], input[type=password] {
+    width: 98%;
+    height: 14px;
+    padding: 5px;
+    margin: 5px 0 5px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+#modalAddGoods input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Overwrite default styles of hr */
+#modalAddGoods hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 15px;
+}
+
+/* Set a style for the submit/register button */
+#modalAddGoods .registerbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 15px 15px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+#modalAddGoods .registerbtn:hover {
+    opacity:1;
+}
+
+/* Add a blue text color to links */
+#modalAddGoods a {
+    color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+#modalAddGoods .signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+/*##################### Modal Save Goods #####################*/
+
+#modalSaveGoods {
+    box-sizing: border-box;
+
+}
+
+#modalSaveGoods .modal-content {
+    width: 500px;
+    height: 550px;
+
+}
+
+/* Add padding to containers */
+#modalSaveGoods .container {
+    margin: 0;
+    padding: 0;
+}
+
+#modalSaveGoods .container h4 {
+    margin: 12px 4px 8px 4px !important;
+    padding: 0;
+}
+
+#modalSaveGoods .container hr {
+    margin: 0 !important;
+    padding: 0;
+}
+
+
+#modalSaveGoods label {
+    font-size: 10px;
+
+}
+
+/* Full-width input fields */
+#modalSaveGoods input[type=text], input[type=password] {
+    width: 98%;
+    height: 14px;
+    padding: 5px;
+    margin: 5px 0 5px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+#modalSaveGoods input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Overwrite default styles of hr */
+#modalSaveGoods hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 15px;
+}
+
+/* Set a style for the submit/register button */
+
+#modalSaveGoods .registerbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 15px 15px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 49%;
+    opacity: 0.9;
+}
+
+#modalSaveGoods .registerbtn:hover {
+    opacity:1;
+}
+
+/* Add a blue text color to links */
+#modalSaveGoods a {
+    color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+#modalSaveGoods .signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+
+/*##################### Modal Delete Goods #####################*/
+
+#modalDeleteGoods {
+    box-sizing: border-box;
+
+}
+
+#modalDeleteGoods .modal-content {
+    width: 300px;
+    height: 110px;
+
+}
+
+/* Add padding to containers */
+#modalDeleteGoods .container {
+    margin: 0;
+    padding: 0;
+}
+
+#modalDeleteGoods .container h4 {
+    margin: 12px 4px 8px 4px !important;
+    padding: 0;
+}
+
+#modalDeleteGoods .container p {
+    font-size: 12px;
+}
+
+#modalDeleteGoods .container hr {
+    margin: 0 !important;
+    padding: 0;
+}
+
+
+/* Overwrite default styles of hr */
+#modalDeleteGoods hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 15px;
+}
+
+/* Set a style for the submit/register button */
+#modalDeleteGoods .modalBtnFooter {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 5px;
+}
+
+#modalDeleteGoods .modalBtnFooter button {
+    padding: 5px;
+}

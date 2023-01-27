@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0" />
+
+    <!-- 기본적으로 기능이 아닌 UI는 Class 로 제어합니다.-->
+
+    <!-- 외부 CDN에서 가져다쓰는 베이스가 돼는 링크입니다.-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+
+    <!-- 공통 CSS링크입니다.-->
+    <link rel="stylesheet" href="./css/button.css" >
+    <link rel="stylesheet" href="./css/table.css" >
+
+    <!-- 화면에 사이즈에 맞는 CSS링크입니다.-->
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:0px) and (max-width:480px)" href="./css/from0to480/S00002.css"> 
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:480px) and (max-width:800px)" href="./css/from480to800/S00002.css"> 
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:800px)" href="./css/over800/S00002.css"> 
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="box"><a href="_#" ><img src="./img/logo.jpg"  /></a></div>
+        <div class="box"></div>
+        <div class="box"><a href="_#" >Cat Market</a></div>
+        <div class="box"><a href="_#" ><i class="material-icons" >exit_to_app</i></a></div>
+    </div>
+
+    <div class="navbar">
+        <div class="box"><a href="_#"><i class="fa fa-fw fa-sitemap"></i> 카테고리 관리</a></div>
+        <div class="box active"><a href="_#" ><i class="fa fa-fw fa-book"></i> 상품 관리</a></div>
+        <div class="box"><a href="_#"><i class="fa fa-fw fa-user"></i> 회원 관리</a></div>
+        <div class="box"><a href="_#"><i class="fa fa-fw fa-window-restore"></i> 주문 관리</a></div>  
+        <div class="box"><a href="_#"><i class="fa fa-microphone"></i> 이벤트/공지사항 관리</a></div>  
+    </div>
+
+    <div class="searchbar">
+        <div class="box"> 
+            <select>
+                <option value="1">과일</option>
+                <option value="2">채소</option>
+            </select>   
+        </div>
+        <div class="box"> 
+            <select>
+                <option value="1">과일</option>
+                <option value="2">채소</option>
+            </select> 
+        </div>
+        <div class="box"> 
+            <input type="text" placeholder="아이템 검색.." name="search">
+            &nbsp;<a href="_#"><i class="fa fa-search"></i></a>
+        </div>
+        <div class="box"> 
+            <button class="btn default" id="btnAddGoods" >상품 등록</button>
+        </div>
+    </div>
+
+    <div class="contents">
+        <div class="row">
+            <div class="column">
+                <table id="tblGoods">
+                    <tr>
+                        <th>상품 No.</th>
+                        <th>상품 이미지</th>
+                        <th>상품명</th>
+                        <th>정가격</th>
+                        <th>판매가격</th>
+                        <th>수량</th>
+                        <th>상품 등록일</th>
+                        <th>상품수정</th>
+                        <th>이벤트 아이템</th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td><img src="./img/logo.jpg"  /></a></td>
+                        <td>상품1</td>
+                        <td>12,000</td>
+                        <td>10,000</td>
+                        <td>100</td>
+                        <td>2022-01-27</td>
+                        <td><button class="btn warning btnSaveGoods">상품 수정</button></td>
+                        <td><button class="btn warning"  >수정</button></td>
+                        <td><button class="btn danger btnDeleteGoods"  >삭제</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td><img src="./img/logo.jpg"  /></a></td>
+                        <td>상품2</td>
+                        <td>12,001</td>
+                        <td>10,001</td>
+                        <td>100</td>
+                        <td>2022-01-27</td>
+                        <td><button class="btn warning btnSaveGoods" >상품 수정</button></td>
+                        <td><button class="btn warning"  >수정</button></td>
+                        <td><button class="btn danger btnDeleteGoods"  >삭제</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td><img src="./img/logo.jpg"  /></a></td>
+                        <td>상품3</td>
+                        <td>12,001</td>
+                        <td>10,001</td>
+                        <td>100</td>
+                        <td>2022-01-27</td>
+                        <td><button class="btn warning btnSaveGoods" >상품 수정</button></td>
+                        <td><button class="btn warning"  >수정</button></td>
+                        <td><button class="btn danger btnDeleteGoods"  >삭제</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td><img src="./img/logo.jpg"  /></a></td>
+                        <td>상품4</td>
+                        <td>12,001</td>
+                        <td>10,001</td>
+                        <td>100</td>
+                        <td>2022-01-27</td>
+                        <td><button class="btn warning btnSaveGoods"  >상품 수정</button></td>
+                        <td><button class="btn warning" >수정</button></td>
+                        <td><button class="btn danger btnDeleteGoods"  >삭제</button></td>
+                    </tr>
+                </table>
+            </div> <!--column end-->   
+        </div> <!--row end-->
+    </div> <!--contents end-->
+
+<!-- The Modal -->
+<div id="modalAddGoods" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" id="btnModalAddGoodsClose">&times;</span>
+
+        <form action="_#">
+            <div class="container">
+              <h4>상품 등록</h4>
+              <hr>
+              <label for="상품카테고리"><b>상품카테고리</b></label>
+              <input type="text" placeholder="상품카테고리.." name=" " id=" " required>
+              <label for="하위카테고리"><b>하위카테고리</b></label>
+              <input type="text" placeholder="하위카테고리.." name=" " id=" " required>
+              <hr>
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+          
+              <label for="psw-repeat"><b>Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+          
+              <label for="psw-repeat"><b>Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+          
+              <label for="psw-repeat"><b>Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+
+              <hr>
+
+              <button type="submit" class="registerbtn">상품등록</button>
+            </div>
+            
+          </form>
+    </div>  
+</div>
+
+<div id="modalSaveGoods" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" id="btnModalSaveGoodsClose">&times;</span>
+
+        <form action="_#">
+            <div class="container">
+              <h4>상품 수정</h4>
+              <hr>
+              <label for="상품카테고리"><b>상품카테고리</b></label>
+              <input type="text" placeholder="상품카테고리.." name=" " id=" " required>
+              <label for="하위카테고리"><b>하위카테고리</b></label>
+              <input type="text" placeholder="하위카테고리.." name=" " id=" " required>
+              <hr>
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+          
+              <label for="psw-repeat"><b>Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+          
+              <label for="psw-repeat"><b>Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+          
+              <label for="psw-repeat"><b>Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+
+              <hr>
+              <div class="modalBtnFooter"> 
+                <button type="submit" class="registerbtn">수정 하기</button>
+                <button type="submit" class="registerbtn">확인</button>
+              </div>
+            </div>
+            
+          </form>
+    </div>  
+</div>
+
+<div id="modalDeleteGoods" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" id="btnModalDeleteGoodsClose">&times;</span>
+
+        <form action="_#">
+            <div class="container">
+              <h4>상품 삭제</h4>
+              <hr>
+              <p>상품을 삭제하면....</p>
+              <hr>
+              <div class="modalBtnFooter"> 
+                <button class="btn danger">삭제</button>
+                <button class="btn default">취소</button>
+              </div>
+            </div>
+          </form>
+    </div> 
+</div>
+
+
+</body>
+
+<script>
+     //기능은 id로 제어합니다. 기능중 중복되는 기능은 class로 제어합니다.
+
+    //##################상품등록 버튼
+    const modalAddGoods = document.querySelector('#modalAddGoods');
+    const btnAddGoods = document.querySelector('#btnAddGoods');
+    const btnModalAddGoodsClose = document.querySelector('#btnModalAddGoodsClose');
+
+    btnAddGoods.addEventListener('click', handleAddGoods);
+    btnModalAddGoodsClose.addEventListener('click', handleModalAddGoodsClose);
+
+    function handleAddGoods(event) {
+        console.log(event);
+        event.preventDefault();
+        modalAddGoods.style.display = "block";
+    }
+
+    function handleModalAddGoodsClose(event) {
+        console.log(event.target);
+        event.preventDefault();
+        modalAddGoods.style.display = "none";
+    }
+
+    //##################그리드 상품수정 버튼
+    const modalSaveGoods = document.querySelector('#modalSaveGoods');
+    const btnSaveGoods = document.querySelectorAll('#tblGoods .btnSaveGoods');
+    const btnModalSaveGoodsClose = document.querySelector('#btnModalSaveGoodsClose');
+
+    btnSaveGoods.forEach( (btnObject) => {
+        btnObject.addEventListener('click', handleSaveGoods)
+    });
+
+    btnModalSaveGoodsClose.addEventListener('click', handleModalSaveGoodsClose);
+
+    function handleSaveGoods(event) {
+        console.log(event);
+        event.preventDefault();
+        modalSaveGoods.style.display = "block";
+    }
+
+    function handleModalSaveGoodsClose(event) {
+        console.log(event.target);
+        event.preventDefault();
+        modalSaveGoods.style.display = "none";
+    }
+
+    //##################그리드 상품삭제 버튼
+    const modalDeleteGoods = document.querySelector('#modalDeleteGoods');
+    const btnDeleteGoods = document.querySelectorAll('#tblGoods .btnDeleteGoods');
+    const btnModalDeleteGoodsClose = document.querySelector('#btnModalDeleteGoodsClose');
+
+    btnDeleteGoods.forEach( (btnObject) => {
+        btnObject.addEventListener('click', handleDeleteGoods)
+    });
+
+    btnModalDeleteGoodsClose.addEventListener('click', handleModalDeleteGoodsClose);
+
+    function handleDeleteGoods(event) {
+        console.log(event);
+        event.preventDefault();
+        modalDeleteGoods.style.display = "block";
+    }
+
+    function handleModalDeleteGoodsClose(event) {
+        console.log(event.target);
+        event.preventDefault();
+        modalDeleteGoods.style.display = "none";
+    }
+
+</script>
+</html> 
