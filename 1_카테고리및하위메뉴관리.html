@@ -1,141 +1,202 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0" />
+
+    <!-- 기본적으로 기능이 아닌 UI는 Class 로 제어합니다.-->
+
+    <!-- 외부 CDN에서 가져다쓰는 베이스가 돼는 링크입니다.-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+
+    <!-- 공통 CSS링크입니다.-->
+    <link rel="stylesheet" href="./css/button.css" >
+    <link rel="stylesheet" href="./css/table.css" >
+
+    <!-- 화면에 사이즈에 맞는 CSS링크입니다.-->
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:0px) and (max-width:480px)" href="./css/from0to480/S00001.css"> 
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:480px) and (max-width:800px)" href="./css/from480to800/S00001.css"> 
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:800px)" href="./css/over800/S00001.css"> 
 </head>
-<style>
-    body {
-        background: white;
-    }
-
-
-    /*##################### Topnav #####################*/
-    .topnav {
-        display: flex;
-        justify-content: center;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        align-items: center;
-
-        width: 100%;
-        background-color: #333;
-        overflow: hidden; 
-    }
-
-    .topnav .box {
-        height: 50px;
-        margin: 0px;
-        padding: 0px;
-        display: flex;
-        background-color: #04AA6D;
-        color: #f2f2f2;
-        font-size: 17px;
-    }
-
-    .topnav .box  a {
-        color: #f2f2f2;
-        text-align: center;
-        text-decoration: none;
-        font-size: 17px;
-    }
-
-   .topnav .box:nth-child(1) {
-        display: flex;
-        flex-basis: 5%;
-        justify-content: center;
-        align-items: center;
-        background-color: white;
-
-    }
-
-    .topnav .box:nth-child(2) {
-        display: flex;
-        flex-basis: 2%;
-        justify-content: center;
-        align-items: center;
-        background-color: #000;
-
-    }   
-
-    .topnav .box:nth-child(3) {
-        display: flex;
-        flex-basis: 88%;
-        justify-content: flex-start;
-        align-items: center;
-        background-color: #000;
-    }
-
-
-    .topnav .box:nth-child(4) {
-        display: flex;
-        flex-basis: 5%;
-        justify-content: center;
-        align-items: center;
-        background-color: #04AA6D;
-    }
-
-
-    /*##################### navbar #####################*/
-    .navbar {
-        width: 100%;
-        background-color: #555;
-        overflow: auto;
-    }
-
-    /* Navbar links */
-    .navbar a {
-        float: left;
-        text-align: center;
-        padding: 12px;
-        color: white;
-        text-decoration: none;
-        font-size: 17px;
-    }
-
-    /* Navbar links on mouse-over */
-    .navbar a:hover {
-        background-color: #000;
-    }
-
-    /* Current/active navbar link */
-    .active {
-        background-color: #04AA6D;
-    }
-
-    /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
-    @media screen and (max-width: 500px) {
-    .navbar a {
-        float: none;
-        display: block;
-    }
-    }
-</style>
 
 <body>
 
-    <div class="topnav">
-        <div class="box"><a href="_#" ><img src="./img/logo.jpg" style="height:50px; width: 80px;" /></a></div>
+    <div class="header">
+        <div class="box"><a href="_#" ><img src="./img/logo.jpg"  /></a></div>
         <div class="box"></div>
         <div class="box"><a href="_#" >Cat Market</a></div>
         <div class="box"><a href="_#" ><i class="material-icons" >exit_to_app</i></a></div>
     </div>
-<!--
-    <a href="_#"><img src="./img/logo.jpg" style="height:30px; width: 60px;" /> Cat Market</a>
-    <a href="_#" class="split"><i class="material-icons" >exit_to_app</i></a>
--->
 
     <div class="navbar">
-        <a href="_#"><i class="fa fa-fw fa-sitemap"></i>카테고리 관리</a>
-        <a href="_#" class="active"  ><i class="fa fa-fw fa-book"></i>상품 관리</a>
-        <a href="_#"><i class="fa fa-fw fa-user"></i>회원 관리</a>
-        <a href="_#"><i class="fa fa-fw fa-window-restore"></i>주문 관리</a>
+        <div class="box"><a href="_#"><i class="fa fa-fw fa-sitemap"></i> 카테고리 관리</a></div>
+        <div class="box active"><a href="_#" ><i class="fa fa-fw fa-book"></i> 상품 관리</a></div>
+        <div class="box"><a href="_#"><i class="fa fa-fw fa-user"></i> 회원 관리</a></div>
+        <div class="box"><a href="_#"><i class="fa fa-fw fa-window-restore"></i> 주문 관리</a></div>  
+        <div class="box"><a href="_#"><i class="fa fa-microphone"></i> 이벤트/공지사항 관리</a></div>  
     </div>
+
+    <div class="contents">
+
+        <div class="row">
+            
+            <div class="column">
+                <table>
+                    <tr>
+                        <th>헤더 카테고리</th>
+                        <th><button class="btn default" id="btnAddHeadCate" >추가</button></th>
+                    </tr>
+
+                    <tr>
+                        <td>이벤트</td>
+                        <td><button class="btn warning" id="btnSaveHeadCate">수정</button>
+                            <button class="btn danger" id="btnDeleteHeadCate">삭제</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>베스트 상품</td>
+                        <td><button class="btn warning">수정</button>
+                            <button class="btn danger">삭제</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>신상품</td>
+                        <td><button class="btn warning">수정</button>
+                            <button class="btn danger">삭제</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>쿠폰</td>
+                        <td><button class="btn warning">수정</button>
+                            <button class="btn danger">삭제</button>
+                        </td>
+                    </tr>
+                </table>
+            </div><!--column end-->
+
+            <div class="column">
+                <table>
+                    <tr>
+                        <th>상위(대표) 메뉴</th>
+                        <th>순서</th>
+                        <th><button class="btn default">추가</button></th>
+                    </tr>
+
+                    <tr>
+                        <td>밀키트/간편식</td>
+                        <td>1</td>
+                        <td><button class="btn warning">수정</button>
+                            <button class="btn danger">삭제</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>과일/채소</td>
+                        <td>2</td>
+                        <td><button class="btn warning">수정</button>
+                            <button class="btn danger">삭제</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>정육/수산/계란</td>
+                        <td>3</td>
+                        <td><button class="btn warning">수정</button>
+                            <button class="btn danger">삭제</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>유제품/우유</td>
+                        <td>4</td>
+                        <td><button class="btn warning">수정</button>
+                            <button class="btn danger">삭제</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>과자/베이커리</td>
+                        <td>5</td>
+                        <td><button class="btn warning">수정</button>
+                            <button class="btn danger">삭제</button>
+                        </td>
+                    </tr>
+                </table>
+            </div><!--column end-->
+
+            <div class="column">
+                <table>
+                    <tr>
+                        <th>하위 메뉴</th>
+                        <th>상위</th>
+                        <th>순서</th>
+                        <th><button class="btn default">추가</button></th>
+                    </tr>
+
+                    <tr>
+                        <td>과일</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td><button class="btn warning">수정</button>
+                            <button class="btn danger">삭제</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>채소</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td><button class="btn warning">수정</button>
+                            <button class="btn danger">삭제</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>샐러드</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td><button class="btn warning">수정</button>
+                            <button class="btn danger">삭제</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>유기농/친환경</td>
+                        <td>2</td>
+                        <td>4/td>
+                        <td><button class="btn warning">수정</button>
+                            <button class="btn danger">삭제</button>
+                        </td>
+                    </tr>
+                </table>
+            </div><!--column end-->
+
+        </div><!--row end-->
+
+    </div> <!--contents end-->
 
 </body>
 
 <script>
+    //기능은 id로 제어합니다.
+    const btnAddHeadCate = document.querySelector('#btnAddHeadCate');
+    const btnSaveHeadCate = document.querySelector('#btnSaveHeadCate');
+    const btnDeleteHeadCate = document.querySelector('#btnDeleteHeadCate');
 
+    btnAddHeadCate.addEventListener('click', handleAddHeadCate);
+    btnSaveHeadCate.addEventListener('click', handleSaveHeadCate);
+    btnDeleteHeadCate.addEventListener('click', handleDeleteHeadCate);
+
+    function handleAddHeadCate(event) {
+        console.log(event);
+        event.preventDefault();
+        alert(`클릭 추가 btnAddHeadCate [${event.pointerType}]`);
+    }
+
+    function handleSaveHeadCate(event) {
+        console.log(event);
+        event.preventDefault();
+        alert(`클릭 수정 btnAddHeadCate [${event.pointerType}]`);
+    }
+
+    function handleDeleteHeadCate(event) {
+        console.log(event);
+        event.preventDefault();
+        alert(`클릭 삭제 btnAddHeadCate [${event.pointerType}]`);
+    }
 </script>
 </html> 
