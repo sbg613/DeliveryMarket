@@ -18,9 +18,23 @@
     <link rel="stylesheet" type="text/css" media="screen and (min-width:0px) and (max-width:480px)" href="./css/from0to480/S00002.css"> 
     <link rel="stylesheet" type="text/css" media="screen and (min-width:480px) and (max-width:800px)" href="./css/from480to800/S00002.css"> 
     <link rel="stylesheet" type="text/css" media="screen and (min-width:800px)" href="./css/over800/S00002.css"> 
+
+    <script type="text/javascript" src="./se2/static/js/service/HuskyEZCreator.js" charset="utf-8"></script>
+
 </head>
 
 <body>
+
+    <form action="insertStudentInfoForm" method="post">
+        <div id="smarteditor">
+          <textarea name="editorTxt" id="editorTxt" 
+                    rows="20" cols="10" 
+                    placeholder="내용을 입력해주세요"
+                    style="width: 500px"></textarea>
+        </div>
+
+      </form>
+
 
     <div class="header">
         <div class="box"><a href="_#" ><img src="./img/logo.jpg"  /></a></div>
@@ -129,6 +143,7 @@
                 </table>
             </div> <!--column end-->   
         </div> <!--row end-->
+
     </div> <!--contents end-->
 
 <!-- The Modal -->
@@ -241,8 +256,26 @@
 
 </body>
 
-<script>
+<script type="text/javascript">
      //기능은 id로 제어합니다. 기능중 중복되는 기능은 class로 제어합니다.
+
+    console.log(nhn.husky.EZCreator);
+
+    let oEditors = []
+
+    smartEditor = function() {
+      console.log("Naver SmartEditor")
+      nhn.husky.EZCreator.createInIFrame({
+        oAppRef: oEditors,
+        elPlaceHolder: "editorTxt",
+        sSkinURI: "./se2/static/SmartEditor2Skin.html",
+        fCreator: "createSEditor2"
+      })
+    }
+
+    window.onload = function(){
+        smartEditor();
+    }
 
     //##################상품등록 버튼
     const modalAddGoods = document.querySelector('#modalAddGoods');

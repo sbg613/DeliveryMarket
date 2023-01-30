@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0" />
+
+    <!-- 기본적으로 기능이 아닌 UI는 Class 로 제어합니다.-->
+
+
+    <script type="text/javascript" src="./se2/static/js/service/HuskyEZCreator.js" charset="utf-8"></script>
+
+</head>
+
+<body>
+
+    <form action="_#" method="post">
+
+        <textarea name="editorTxt" 
+                id="editorTxt" 
+                rows="20" 
+                cols="10" 
+                placeholder="내용을 입력해주세요"
+                style="width: 500px" ></textarea>
+
+    </form>
+
+</body>
+
+<script type="text/javascript">
+    //기능은 id로 제어합니다. 기능중 중복되는 기능은 class로 제어합니다.
+    //링크가 막혔는지 테스트가 안됨
+
+    fnSmartEditor = function() {
+      console.log("Naver SmartEditor")
+      nhn.husky.EZCreator.createInIFrame({
+        oAppRef: [],
+        elPlaceHolder: "editorTxt",
+        sSkinURI: "./se2/static/SmartEditor2Skin.html",
+        fCreator: "createSEditor2"
+      })
+    }
+
+    window.onload = function(){
+        fnSmartEditor();
+    }
+
+</script>
+</html> 
