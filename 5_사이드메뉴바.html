@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0" />
+
+    <!-- 기본적으로 기능이 아닌 UI는 Class 로 제어합니다.-->
+
+    <!-- 외부 CDN에서 가져다쓰는 베이스가 돼는 링크입니다.-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+
+    <!-- 공통 CSS링크입니다.-->
+    <link rel="stylesheet" href="./css/button.css" >
+    <link rel="stylesheet" href="./css/table.css" >
+
+    <!-- 화면에 사이즈에 맞는 CSS링크입니다.-->
+
+    <link rel="stylesheet" type="text/css" href="./css/over800/S00005.css"> 
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="box"><button class="openbtn" onclick="openNav()">☰</button>  </div>    
+        <div class="box"><a href="_#" ><img src="./img/logo.jpg"  /></a></div>
+        <div class="box"></div>
+        <div class="box"><a href="_#" >Cat Market</a></div>
+        <div class="box"><a href="_#" ><i class="material-icons" >exit_to_app</i></a></div>
+    </div>
+
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+        <div class="sidenav">
+            <a href="_#"><i class="fa fa-fw fa-sitemap"></i> 카테고리 관리</a>
+            <a href="_#" ><i class="fa fa-fw fa-book"></i> 상품 관리</a>
+            <a href="_#"><i class="fa fa-fw fa-user"></i> 회원 관리</a>
+            <button class="dropdown-btn">
+                <i class="fa fa-fw fa-window-restore"></i> 주문 관리 <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+            <a href="_#"><i class="fa fa-microphone"></i> 이벤트/공지사항 관리</a>
+          </div>
+
+    </div>
+
+    <div class="searchbar">
+        <div class="box"> 
+            <input type="text" placeholder="주문 검색.." name="search">
+            &nbsp;<a href="_#"><i class="fa fa-search"></i></a>
+        </div>
+    </div>
+
+    <div class="contents">
+        <div class="row">
+            <div class="column">
+                <table id="tblGoods">
+                    <tr>
+                        <th>주문일</th>
+                        <th>주문번호</th>
+                        <th>계정번호</th>
+                        <th colspan="2">주문품록</th>
+                        <th>결제금액</th>
+                        <th>주소</th>
+                        <th>주문상태</th>
+                        <th> </th>
+                    </tr>
+
+                    <tr>
+                        <td>2022-01-01</td>
+                        <td>A000001</td>
+                        <td>1</td>
+                        <td><img src="./img/logo.jpg"  /></a></td>
+                        <td>사과외 5개 품목</td>
+                        <td>55,000</td>
+                        <td>서울</td>
+                        <td>배송완료</td>
+                        <td><button class="btn warning"  >배송중</button>
+                            <button class="btn success"  >배송완료</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2022-01-01</td>
+                        <td>A000001</td>
+                        <td>1</td>
+                        <td><img src="./img/logo.jpg"  /></a></td>
+                        <td>사과외 5개 품목</td>
+                        <td>55,000</td>
+                        <td>서울</td>
+                        <td>배송완료</td>
+                        <td><button class="btn warning"  >배송중</button>
+                            <button class="btn success"  >배송완료</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2022-01-01</td>
+                        <td>A000001</td>
+                        <td>1</td>
+                        <td><img src="./img/logo.jpg"  /></a></td>
+                        <td>사과외 5개 품목</td>
+                        <td>55,000</td>
+                        <td>서울</td>
+                        <td>배송완료</td>
+                        <td><button class="btn warning"  >배송중</button>
+                            <button class="btn success"  >배송완료</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2022-01-01</td>
+                        <td>A000001</td>
+                        <td>1</td>
+                        <td><img src="./img/logo.jpg"  /></a></td>
+                        <td>사과외 5개 품목</td>
+                        <td>55,000</td>
+                        <td>서울</td>
+                        <td>배송완료</td>
+                        <td><button class="btn warning"  >배송중</button>
+                            <button class="btn success"  >배송완료</button>
+                        </td>
+                    </tr>
+                </table>
+            </div> <!--column end-->   
+        </div> <!--row end-->
+        <row>
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a class="active" href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </row>
+
+    </div> <!--contents end-->
+
+</body>
+
+<script>
+     //기능은 id로 제어합니다. 기능중 중복되는 기능은 class로 제어합니다.
+    function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+    }
+
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            } else {
+            dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script>
+</html> 
